@@ -128,7 +128,7 @@ def logout():
     return home_html()
 
 
-@app.route("/api", methods=["GET"])
+@app.route("/public_API", methods=["GET"])
 def api():
     filter={"_id":0, "s_no":1,"title":1,"name":1,"slug":1,"content":1,"date":1, "tagline":1}
     posts = post_db.find({},filter)
