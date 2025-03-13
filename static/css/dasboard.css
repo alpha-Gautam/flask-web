@@ -1,0 +1,13 @@
+/* 
+
+.button {
+    color: red;
+    background-color: blue;
+    opacity: 1;
+    border-radius: 20px;
+}
+
+.button:hover {
+    opacity: 0.5;
+    transform: scale(1.25);
+} */

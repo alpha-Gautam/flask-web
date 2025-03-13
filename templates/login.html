@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Classic Login Form Example</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Assistant:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/login_style.css')}}"
+    />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div>
+      <a href="home">Back</a>
+    </div>
+    <div class="login_panal">
+      <div class="home-link">
+        <a href="home"> Back</a>
+      </div>
+    <section class="login" id="login">
+
+     
+      <div class="head">
+        <h1 class="company">Admin Login</h1>
+      </div>
+      <p class="msg">Welcome back</p>
+      <div class="form">
+        <form class="login_form" action="/login" method="post">
+          <input
+            type="text"
+            placeholder="admin"
+            class="text"
+            id="username"
+            name="uname"
+            required
+          /><br />
+          <input
+            type="password"
+            placeholder="admin121"
+            class="password"
+            name="p_word"
+          /><br />
+          <p style="color: tomato">{{mess}}</p>
+          <div class="login_forget">
+          <button class="btn-login" type="submit">Login</button>
+          <button class="btn-login" type="Forget">Forget</button>
+          </div>
+
+      </div>
+  
+    </div>
+  </body>
+  
+</html>

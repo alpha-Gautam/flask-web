@@ -1,0 +1,78 @@
+{% extends "layout.html" %} {% block body %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('{{url_for('static',filename='assets/img/admin1-bg.jpg')}}')"
+  <link
+  rel="stylesheet"
+  href="{{url_for('static', filename='css/dasboard.css')}}"
+/>
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="post-heading">
+          <!-- <h1>Man must explore, and this is exploration at its greatest</h1> -->
+          <h1 align="center">Welcome To Admin palne</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Post Content-->
+<body>
+  <h2 align="center">HTML Table</h2>
+  <hr />
+  <p></p>
+  <div style="display: flex; height:50px; justify-content: flex-end; padding-right: 50px; background-color: black;">
+    <button onclick="console.log('add button clocked..!')"  class="button " style="flex ; border-radius: 20px; " >Add Blog</button>
+
+  </div>
+  </div>
+  <div style="overflow: auto">
+    <table style="width: 100%">
+      <tr style="background-color: #eee; text-align: center">
+        <th style="border: 2px">Title</th>
+        <th style="border: 2px">Tagline</th>
+        <th style="border: 2px">Content</th>
+        <th style="border: 2px">Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      {% for post in posts %}
+      <tr style="text-align: center">
+        <td style="padding: 10px">{{post.title}}</td>
+        <td style="padding: 2px">{{post.tagline}}</td>
+        <td style="padding: 10px">{{post.content[:50]}}..</td>
+        <td style="padding: 10px">{{post.date}}</td>
+        <td style="padding: 10px">
+          <button style="color: tomato">Edit</button>
+        </td>
+        <td style="padding: 10px">
+          <button style="color: tomato">Delete</button>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <hr />
+  <article class="mb-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <p>
+            Placeholder text by
+            <a href="http://spaceipsum.com/">Space Ipsum</a>
+            &middot; Images by
+            <a href="https://www.flickr.com/photos/nasacommons/"
+              >NASA on The Commons</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</body>
+<!-- Footer-->
+{% endblock %}
